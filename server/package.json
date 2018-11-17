@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node -r dotenv-safe/config index.js",
+    "dev": "nodemon"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "ioredis": "^4.2.0",
+    "pg": "^7.6.1"
+  },
+  "devDependencies": {
+    "dotenv-safe": "^6.1.0",
+    "nodemon": "^1.18.6"
+  }
+}

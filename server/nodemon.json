@@ -1,0 +1,12 @@
+{
+  "watch": [
+    "server",
+    "src"
+  ],
+  "ext": "js ts",
+  "ignore": [
+    "src/**/*.spec.ts"
+  ],
+  "legacyWatch": true,
+  "exec": "node -r dotenv-safe/config index.js"
+}
