@@ -1,0 +1,33 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name": "client",
+      "image": "trahomoto/complex-docker-app-client",
+      "hostname": "client",
+      "essential": false
+    },
+    {
+      "name": "server",
+      "image": "trahomoto/complex-docker-app-nginx",
+      "hostname": "api",
+      "essential": false
+    },
+    {
+      "name": "worker",
+      "image": "trahomoto/complex-docker-app-worker",
+      "hostname": "worker",
+      "essential": false
+    },
+    {
+      "name": "nginx",
+      "image": "trahomoto/complex-docker-app-nginx",
+      "hostname": "nginx",
+      "essential": true,
+      "portMappings": [
+        { "hostPort":  80, "containerPort": 80 }
+      ],
+      "links": ["client", "server"]
+    }
+  ]
+}
