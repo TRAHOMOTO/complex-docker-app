@@ -30,13 +30,12 @@ class Fib extends React.Component {
   };
 
   renderSeenIndexes() {
-    return this.state.seenIndexes
-      .map(({number}) => number)
+    return (this.state.seenIndexes || []).map(({number}) => number)
       .join(', ')
   }
 
   renderCalculatedValues() {
-    return Object.keys(this.state.values)
+    return Object.keys(this.state.values || {})
       .map(key => <div key={key}>For index {key} I calculated { this.state.values[key] }</div>)
   }
 

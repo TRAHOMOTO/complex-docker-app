@@ -22,15 +22,15 @@ after_success:
   - docker push trahomoto/complex-docker-app-server
   - docker push trahomoto/complex-docker-app-worker
 
-deploy:
-  provider: "elasticbeanstalk"
-  region: "us-east-2"
-  app: "complex-docker-app"
-  env: "ComplexDockerApp-env"
-  bucket_name: "elasticbeanstalk-us-east-2-222263910670"
-  bucket_path: "complex-docker-app"
-  on:
-    branch: "master"
-  access_key_id: "$AWS_ACCESS_KEY"
-  secret_access_key:
-    secure: "$AWS_SECRET_KEY"
+#deploy:
+#  provider: "elasticbeanstalk"
+#  region: "us-east-2"
+#  app: "complex-docker-app"
+#  env: "ComplexDockerApp-env"
+#  bucket_name: "elasticbeanstalk-us-east-2-222263910670"
+#  bucket_path: "complex-docker-app"
+#  on:
+#    branch: "master"
+#  access_key_id: "$AWS_ACCESS_KEY"
+#  secret_access_key:
+#    secure: "$AWS_SECRET_KEY"
